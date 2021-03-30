@@ -3,5 +3,5 @@ numpy
 sklearn
 flask
 matplotlib
-gunicorn
+gunicorn==20.0.4
 seaborn
