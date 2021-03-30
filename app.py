@@ -12,7 +12,7 @@ def hello_world():
     return ("hellow abeni")
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict_master', methods=['POST'])
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final = [np.array(int_features)]
