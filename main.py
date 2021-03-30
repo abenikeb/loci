@@ -18,13 +18,8 @@ def hello_world():
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final = [np.array(int_features)]
-    print(int_features)
-    print(final)
-    # test = np.array([41.2, 11.5, 1, 11.2, 23.5, 45, 10, 4, 23])
-    # test = test.reshape(1, -1)
     prediction = model.predict(final)
-    # output = '{0:.{1}f}'.format(prediction[0][1], 2)
-
+   
     if prediction > (0.5):
         return render_template('index.php', pred='Probability occurance {}'.format(prediction), bhai="kuch karna hain iska ab?")
     else:
