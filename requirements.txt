@@ -3,7 +3,6 @@ numpy==1.18.1
 sklearn
 scikit_learn==0.22.1
 flask
-Flask==1.1.1
 matplotlib
 gunicorn==20.0.4
 seaborn
