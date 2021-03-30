@@ -1,18 +1,20 @@
-from flask import Flask, request, url_for, redirect, render_template
+from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-app = Flask("mpg_prediction")
+
 
 model = pickle.load(open('model_farm.pkl', 'rb'))
 
+app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+
+@app.route('/')
 def hello_world():
     return ("hellow abeni")
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final = [np.array(int_features)]
@@ -29,5 +31,5 @@ def predict():
         return render_template('index.php', pred='Probability of fire occuring is {}'.format(prediction), bhai="Your Forest is Safe for now")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
