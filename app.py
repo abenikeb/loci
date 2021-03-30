@@ -14,11 +14,11 @@ def hello_world():
 
 @app.route('/predict_master', methods=['POST'])
 def predict():
-    int_features = [float(x) for x in request.form.values()]
-    final = [np.array(int_features)]
-    prediction = model.predict(final)
+#     int_features = [float(x) for x in request.form.values()]
+#     final = [np.array(int_features)]
+#     prediction = model.predict(final)
    
-    if prediction > (0.5):
+    if 5 > (0.5):
         return render_template('index.php', pred='Probability occurance {}'.format(prediction), bhai="kuch karna hain iska ab?")
     else:
         return render_template('index.php', pred='Probability of fire occuring is {}'.format(prediction), bhai="Your Forest is Safe for now")
