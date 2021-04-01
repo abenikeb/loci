@@ -20,11 +20,11 @@ def predict():
     print(final)
     test = np.array([41.2, 11.5, 1, 11.2, 23.5, 45, 10, 4, 23])
     test = test.reshape(1, -1)
-    prediction = model.predict(test)
+    prediction = model.predict(final)
    
     if 5 > (0.5):
-#        return render_template('index.html', pred='Probability occurance {}'.format(prediction), bhai="kuch karna hain iska ab?")
-       return render_template('index.html', pred=1)
+       return render_template('index.html', pred='Probability occurance {}'.format(prediction), bhai="kuch karna hain iska ab?")
+#        return render_template('index.html', pred=1)
     else:
         return render_template('index.php', pred='Probability of fire occuring is {}'.format(prediction), bhai="Your Forest is Safe for now")
 
