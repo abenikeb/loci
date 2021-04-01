@@ -1,5 +1,4 @@
   <?php
-  // finding current location
   $cache_file = 'data.json';
   if (file_exists($cache_file)) {
       $data = json_decode(file_get_contents($cache_file));
