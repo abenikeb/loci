@@ -135,7 +135,7 @@
         </div>
         <div class="col-md-8 order-md-1">
           
-          <a href="https://mintinc.000webhostapp.com/hitMap.php" class="btn btn-info" class="mb-3"><i class="fa fa-arrow-circle-o-left"></i> Back </a>
+          <a href="https://mintinc.000webhostapp.com/hitMap.php?id={{pred}}" class="btn btn-info" class="mb-3"><i class="fa fa-arrow-circle-o-left"></i> Back </a>
         
           <hr class="mb-4">
             <br>
