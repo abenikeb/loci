@@ -150,7 +150,11 @@
  
             <a href="hitmap.php" class="btn btn-danger" class="btn btn-info btn-lg">{{pred}}</a>
             <hr class="mb-4">
-             <p><em>The result shows the area may be..!<em></p>
+              <?php if(pred>0.5):?>
+             <p><em>The result shows the area may be at risk..!<em></p>
+                  <?php else :?>
+             <p><em>The result shows the area may not be at risk..!<em></p>
+               <?Php endif; ?>
              <p>The development of automated tools will help the organization and the 
                <em>government to early detect and predict locust swarm suitable locations based on<em> 
                  the<b> metrological </b>and other seasonal factors such as wind direction and month of the year. If the invasion of the locust is early predicted it will help for taking corrective measures and to plan early the resources needed to combat the locust spread</p>
