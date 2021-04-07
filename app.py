@@ -24,7 +24,7 @@ def predict():
    
     if 5 > (0.5):
        return render_template('index.php', pred=prediction)
-#        return render_template('index.html', pred=1)
+
     else:
         return render_template('index.php', pred='Probability of fire occuring is {}'.format(prediction), bhai="Your Forest is Safe for now")
 
