@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return ("Hello! This is loci company")
+    return ("Hello! This is loci company-")
 
 
 @app.route('/predict_master', methods=['POST'])
