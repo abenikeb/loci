@@ -150,7 +150,8 @@
  
             <a href="hitmap.php" class="btn btn-danger" class="btn btn-info btn-lg">{{pred}}</a>
             <hr class="mb-4">
-              <?php if(pred>0.5):?>
+             
+              <?php if(pred[1]>0.5):?>
              <p><em>The result shows the area may be at risk..!<em></p>
                   <?php else :?>
              <p><em>The result shows the area may not be at risk..!<em></p>
