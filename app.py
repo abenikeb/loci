@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-model = pickle.load(open('model_farm.pkl', 'rb'))
+model = pickle.load(open('model_AI.pkl', 'rb'))
 
 app = Flask(__name__)
 
@@ -22,11 +22,11 @@ def predict():
 #     test = test.reshape(1, -1)
     prediction = model.predict(final)
    
-    if 5 > (0.5):
+    if prediction > (0.5):
        return render_template('index.php', pred=prediction)
 
     else:
-        return render_template('index.php', pred='Probability of fire occuring is {}'.format(prediction), bhai="Your Forest is Safe for now")
+        return render_template('index.php', pred=prediction)
 
 
 if __name__ == "__main__":
